@@ -1,0 +1,429 @@
+
+
+U-Boot 1.0.0 (Mar 11 2011 - 16:21:42)
+
+U-Boot code: 33F80000 -> 33F9D8C0  BSS: -> 33FB0100
+IRQ Stack: 33fd10fc
+FIQ Stack: 33fd20fc
+DRAM Configuration:
+Bank #0: 30000000 64 MB
+NAND:64 MB
+Net:   ax88796c
+Warning: ax88796c MAC addresses don't match:
+Address in SROM is         08:00:3E:26:0A:5B
+Address in environment is  00:12:34:56:78:9A
+
+In:    serial
+Out:   serial
+Err:   serial
+Hit any key to stop autoboot:  0
+zImage magic = 0x016f2818
+NOW, Booting Linux......
+Uncompressing Linux... done, booting the kernel.
+[    0.000000] Linux version 2.6.35.1 (root@localhost.localdomain) (gcc version 4.3.5 (Buildroot 2010.08-rc1) ) #250 Mon Sep 2 17:53:43 CST 2013
+[    0.000000] CPU: ARM920T [41129200] revision 0 (ARMv4T), cr=c0007177
+[    0.000000] CPU: VIVT data cache, VIVT instruction cache
+[    0.000000] Machine: SMDK2440
+[    0.000000] Warning: bad configuration page, trying to continue
+[    0.000000] Memory policy: ECC disabled, Data cache writeback
+[    0.000000] CPU S3C2440A (id 0x32440001)
+[    0.000000] S3C24XX Clocks, Copyright 2004 Simtec Electronics
+[    0.000000] S3C244X: core 406.425 MHz, memory 135.475 MHz, peripheral 67.737 MHz
+[    0.000000] CLOCK: Slow mode (2.116 MHz), fast, MPLL on, UPLL on
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 16256
+[    0.000000] Kernel command line: noinitrd root=/dev/mtdblock2 console=ttySAC0,115200 mem=64M init=/linuxrc
+[    0.000000] PID hash table entries: 256 (order: -2, 1024 bytes)
+[    0.000000] Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.000000] Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Memory: 64MB = 64MB total
+[    0.000000] Memory: 61500k/61500k available, 4036k reserved, 0K highmem
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+[    0.000000]     DMA     : 0xffc00000 - 0xffe00000   (   2 MB)
+[    0.000000]     vmalloc : 0xc4800000 - 0xe0000000   ( 440 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xc4000000   (  64 MB)
+[    0.000000]     modules : 0xbf000000 - 0xc0000000   (  16 MB)
+[    0.000000]       .init : 0xc0008000 - 0xc0026000   ( 120 kB)
+[    0.000000]       .text : 0xc0026000 - 0xc0302000   (2928 kB)
+[    0.000000]       .data : 0xc0314000 - 0xc0335ba0   ( 135 kB)
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000]  RCU-based detection of stalled CPUs is disabled.
+[    0.000000]  Verbose stalled-CPUs detection is disabled.
+[    0.000000] NR_IRQS:85
+[    0.000000] irq: clearing pending ext status 00000300
+[    0.000000] irq: clearing subpending status 00000002
+[    0.000000] Console: colour dummy device 80x30
+[    0.000000] console [ttySAC0] enabled
+[    0.015000] Calibrating delay loop... 202.75 BogoMIPS (lpj=506880)
+[    0.110000] pid_max: default: 32768 minimum: 301
+[    0.110000] Mount-cache hash table entries: 512
+[    0.115000] CPU: Testing write buffer coherency: ok
+[    0.125000] gpiochip_add: gpios 288..303 (GPIOK) failed to register
+[    0.130000] gpiochip_add: gpios 320..334 (GPIOL) failed to register
+[    0.135000] gpiochip_add: gpios 352..353 (GPIOM) failed to register
+[    0.145000] NET: Registered protocol family 16
+[    0.165000] S3C Power Management, Copyright 2004 Simtec Electronics
+[    0.165000] S3C2440: Initialising architecture
+[    0.170000] S3C2440: IRQ Support
+[    0.175000] S3C244X: Clock Support, DVS off
+[    0.270000] bio: create slab <bio-0> at 0
+[    0.275000] SCSI subsystem initialized
+[    0.280000] usbcore: registered new interface driver usbfs
+[    0.285000] usbcore: registered new interface driver hub
+[    0.290000] usbcore: registered new device driver usb
+[    0.315000] NET: Registered protocol family 2
+[    0.315000] IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.325000] TCP established hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.330000] TCP bind hash table entries: 2048 (order: 3, 40960 bytes)
+[    0.335000] TCP: Hash tables configured (established 2048 bind 2048)
+[    0.340000] TCP reno registered
+[    0.345000] UDP hash table entries: 128 (order: 0, 6144 bytes)
+[    0.350000] UDP-Lite hash table entries: 128 (order: 0, 6144 bytes)
+[    0.360000] NET: Registered protocol family 1
+[    0.365000] NetWinder Floating Point Emulator V0.97 (extended precision)
+[    0.375000] JFFS2 version 2.2. (NAND) ? 2001-2006 Red Hat, Inc.
+[    0.380000] msgmni has been set to 120
+[    0.380000] io scheduler noop registered
+[    0.385000] io scheduler deadline registered
+[    0.390000] io scheduler cfq registered (default)
+[    0.410000] Console: switching to colour frame buffer device 30x40
+[    0.415000] fb0: s3c2410fb frame buffer device
+[    1.850000] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    1.870000] s3c2440-uart.0: s3c2410_serial0 at MMIO 0x50000000 (irq = 70) is a S3C2440
+[    1.875000] s3c2440-uart.1: s3c2410_serial1 at MMIO 0x50004000 (irq = 73) is a S3C2440
+[    1.885000] s3c2440-uart.2: s3c2410_serial2 at MMIO 0x50008000 (irq = 76) is a S3C2440
+[    1.950000] brd: module loaded
+[    1.980000] loop: module loaded
+[    1.990000] S3C24XX NAND Driver, (c) 2004 Simtec Electronics
+[    1.990000] s3c24xx-nand s3c2440-nand: Tacls=2, 14ns Twrph0=6 44ns, Twrph1=2 14ns
+[    1.995000] s3c24xx-nand s3c2440-nand: NAND ECC disabled
+[    2.000000] NAND device: Manufacturer ID: 0xec, Chip ID: 0x76 (Samsung NAND 64MiB 3,3V 8-bit)
+[    2.005000] NAND_ECC_NONE selected by board driver. This is not recommended !!
+[    2.010000] Scanning device for bad blocks
+[    2.220000] Creating 4 MTD partitions on "NAND 64MiB 3,3V 8-bit":
+[    2.220000] 0x000000000000-0x000000030000 : "Boot Agent"
+[    2.235000] 0x000000030000-0x000000200000 : "S3C2440 Linux Kernel"
+[    2.245000] 0x000000200000-0x000001e00000 : "S3C2410 Root (Read Only)"
+[    2.255000] 0x000001e00000-0x000004000000 : "S3C2410 User"
+[    2.270000] usbcore: registered new interface driver asix
+[    2.270000] usbmon: debugfs is not available
+[    2.275000] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    2.280000] s3c2410-ohci s3c2410-ohci: S3C24XX OHCI
+[    2.285000] s3c2410-ohci s3c2410-ohci: new USB bus registered, assigned bus number 1
+[    2.290000] s3c2410-ohci s3c2410-ohci: irq 42, io mem 0x49000000
+[    2.355000] hub 1-0:1.0: USB hub found
+[    2.355000] hub 1-0:1.0: 2 ports detected
+[    2.365000] Initializing USB Mass Storage driver...
+[    2.365000] usbcore: registered new interface driver usb-storage
+[    2.370000] USB Mass Storage support registered.
+[    2.375000] usbcore: registered new interface driver libusual
+[    2.385000] usbcore: registered new interface driver usbserial
+[    2.385000] USB Serial support registered for generic
+[    2.395000] usbcore: registered new interface driver usbserial_generic
+[    2.400000] usbserial: USB Serial Driver core
+[    2.405000] USB Serial support registered for FTDI USB Serial Device
+[    2.410000] usbcore: registered new interface driver ftdi_sio
+[    2.415000] ftdi_sio: v1.6.0:USB FTDI Serial Converters Driver
+[    2.420000] USB Serial support registered for pl2303
+[    2.425000] usbcore: registered new interface driver pl2303
+[    2.430000] pl2303: Prolific PL2303 USB to serial adaptor driver
+[    2.440000] mice: PS/2 mouse device common for all mice
+[    2.445000] S3C2410 Watchdog Timer, (c) 2004 Simtec Electronics
+[    2.450000] s3c2410-wdt s3c2410-wdt: watchdog inactive, reset disabled, irq enabled
+[    2.465000] TCP cubic registered
+[    2.465000] NET: Registered protocol family 17
+[    2.480000] VFS: Mounted root (cramfs filesystem) readonly on device 31:2.
+[    2.485000] Freeing init memory: 120K
+Initializing random number generator... read-only file system detected...done
+Initializing random number generator... read-only file system detected...done
+Starting network...
+Starting vsftpd: OK
+
+Welcome to Buildroot
+buildroot login: root
+# ifconfig
+eth0      Link encap:Ethernet  HWaddr 00:12:34:56:78:9A
+          inet addr:192.168.0.33  Bcast:192.168.0.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:8 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:736 (736.0 B)  TX bytes:0 (0.0 B)
+          Interrupt:63
+
+# dmesg
+[    0.000000] Linux version 2.6.35.1 (root@localhost.localdomain) (gcc version 4.3.5 (Buildroot 2010.08-rc1) ) #250 Mon Sep 2 17:53:43 CST 2013
+[    0.000000] CPU: ARM920T [41129200] revision 0 (ARMv4T), cr=c0007177
+[    0.000000] CPU: VIVT data cache, VIVT instruction cache
+[    0.000000] Machine: SMDK2440
+[    0.000000] Warning: bad configuration page, trying to continue
+[    0.000000] Memory policy: ECC disabled, Data cache writeback
+[    0.000000] On node 0 totalpages: 16384
+[    0.000000] free_area_init_node: node 0, pgdat c0335540, node_mem_map c035f000
+[    0.000000]   Normal zone: 128 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 16256 pages, LIFO batch:3
+[    0.000000] CPU S3C2440A (id 0x32440001)
+[    0.000000] S3C24XX Clocks, Copyright 2004 Simtec Electronics
+[    0.000000] S3C244X: core 406.425 MHz, memory 135.475 MHz, peripheral 67.737 MHz
+[    0.000000] CLOCK: Slow mode (2.116 MHz), fast, MPLL on, UPLL on
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 16256
+[    0.000000] Kernel command line: noinitrd root=/dev/mtdblock2 console=ttySAC0,115200 mem=64M init=/linuxrc
+[    0.000000] PID hash table entries: 256 (order: -2, 1024 bytes)
+[    0.000000] Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.000000] Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Memory: 64MB = 64MB total
+[    0.000000] Memory: 61500k/61500k available, 4036k reserved, 0K highmem
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+[    0.000000]     DMA     : 0xffc00000 - 0xffe00000   (   2 MB)
+[    0.000000]     vmalloc : 0xc4800000 - 0xe0000000   ( 440 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xc4000000   (  64 MB)
+[    0.000000]     modules : 0xbf000000 - 0xc0000000   (  16 MB)
+[    0.000000]       .init : 0xc0008000 - 0xc0026000   ( 120 kB)
+[    0.000000]       .text : 0xc0026000 - 0xc0302000   (2928 kB)
+[    0.000000]       .data : 0xc0314000 - 0xc0335ba0   ( 135 kB)
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000]  RCU-based detection of stalled CPUs is disabled.
+[    0.000000]  Verbose stalled-CPUs detection is disabled.
+[    0.000000] NR_IRQS:85
+[    0.000000] irq: clearing pending ext status 00000300
+[    0.000000] irq: clearing subpending status 00000002
+[    0.000000] timer tcon=00500000, tcnt dc7f, tcfg 00000200,00000000, usec 000016ad
+[    0.000000] Console: colour dummy device 80x30
+[    0.000000] console [ttySAC0] enabled
+[    0.015000] Calibrating delay loop... 202.75 BogoMIPS (lpj=506880)
+[    0.110000] pid_max: default: 32768 minimum: 301
+[    0.110000] Mount-cache hash table entries: 512
+[    0.115000] CPU: Testing write buffer coherency: ok
+[    0.125000] gpiochip_add: gpios 288..303 (GPIOK) failed to register
+[    0.130000] gpiochip_add: gpios 320..334 (GPIOL) failed to register
+[    0.135000] gpiochip_add: gpios 352..353 (GPIOM) failed to register
+[    0.145000] NET: Registered protocol family 16
+[    0.165000] S3C Power Management, Copyright 2004 Simtec Electronics
+[    0.165000] S3C2440: Initialising architecture
+[    0.170000] S3C2440: IRQ Support
+[    0.175000] S3C244X: Clock Support, DVS off
+[    0.270000] bio: create slab <bio-0> at 0
+[    0.275000] SCSI subsystem initialized
+[    0.280000] usbcore: registered new interface driver usbfs
+[    0.285000] usbcore: registered new interface driver hub
+[    0.290000] usbcore: registered new device driver usb
+[    0.315000] NET: Registered protocol family 2
+[    0.315000] IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.325000] TCP established hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.330000] TCP bind hash table entries: 2048 (order: 3, 40960 bytes)
+[    0.335000] TCP: Hash tables configured (established 2048 bind 2048)
+[    0.340000] TCP reno registered
+[    0.345000] UDP hash table entries: 128 (order: 0, 6144 bytes)
+[    0.350000] UDP-Lite hash table entries: 128 (order: 0, 6144 bytes)
+[    0.360000] NET: Registered protocol family 1
+[    0.365000] NetWinder Floating Point Emulator V0.97 (extended precision)
+[    0.375000] JFFS2 version 2.2. (NAND) ? 2001-2006 Red Hat, Inc.
+[    0.380000] msgmni has been set to 120
+[    0.380000] io scheduler noop registered
+[    0.385000] io scheduler deadline registered
+[    0.390000] io scheduler cfq registered (default)
+[    0.410000] Console: switching to colour frame buffer device 30x40
+[    0.415000] fb0: s3c2410fb frame buffer device
+[    1.850000] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    1.870000] s3c2440-uart.0: s3c2410_serial0 at MMIO 0x50000000 (irq = 70) is a S3C2440
+[    1.875000] s3c2440-uart.1: s3c2410_serial1 at MMIO 0x50004000 (irq = 73) is a S3C2440
+[    1.885000] s3c2440-uart.2: s3c2410_serial2 at MMIO 0x50008000 (irq = 76) is a S3C2440
+[    1.950000] brd: module loaded
+[    1.980000] loop: module loaded
+[    1.990000] S3C24XX NAND Driver, (c) 2004 Simtec Electronics
+[    1.990000] s3c24xx-nand s3c2440-nand: Tacls=2, 14ns Twrph0=6 44ns, Twrph1=2 14ns
+[    1.995000] s3c24xx-nand s3c2440-nand: NAND ECC disabled
+[    2.000000] NAND device: Manufacturer ID: 0xec, Chip ID: 0x76 (Samsung NAND 64MiB 3,3V 8-bit)
+[    2.005000] NAND_ECC_NONE selected by board driver. This is not recommended !!
+[    2.010000] Scanning device for bad blocks
+[    2.220000] Creating 4 MTD partitions on "NAND 64MiB 3,3V 8-bit":
+[    2.220000] 0x000000000000-0x000000030000 : "Boot Agent"
+[    2.235000] 0x000000030000-0x000000200000 : "S3C2440 Linux Kernel"
+[    2.245000] 0x000000200000-0x000001e00000 : "S3C2410 Root (Read Only)"
+[    2.255000] 0x000001e00000-0x000004000000 : "S3C2410 User"
+[    2.270000] usbcore: registered new interface driver asix
+[    2.270000] usbmon: debugfs is not available
+[    2.275000] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    2.280000] s3c2410-ohci s3c2410-ohci: S3C24XX OHCI
+[    2.285000] s3c2410-ohci s3c2410-ohci: new USB bus registered, assigned bus number 1
+[    2.290000] s3c2410-ohci s3c2410-ohci: irq 42, io mem 0x49000000
+[    2.355000] hub 1-0:1.0: USB hub found
+[    2.355000] hub 1-0:1.0: 2 ports detected
+[    2.365000] Initializing USB Mass Storage driver...
+[    2.365000] usbcore: registered new interface driver usb-storage
+[    2.370000] USB Mass Storage support registered.
+[    2.375000] usbcore: registered new interface driver libusual
+[    2.385000] usbcore: registered new interface driver usbserial
+[    2.385000] USB Serial support registered for generic
+[    2.395000] usbcore: registered new interface driver usbserial_generic
+[    2.400000] usbserial: USB Serial Driver core
+[    2.405000] USB Serial support registered for FTDI USB Serial Device
+[    2.410000] usbcore: registered new interface driver ftdi_sio
+[    2.415000] ftdi_sio: v1.6.0:USB FTDI Serial Converters Driver
+[    2.420000] USB Serial support registered for pl2303
+[    2.425000] usbcore: registered new interface driver pl2303
+[    2.430000] pl2303: Prolific PL2303 USB to serial adaptor driver
+[    2.440000] mice: PS/2 mouse device common for all mice
+[    2.445000] S3C2410 Watchdog Timer, (c) 2004 Simtec Electronics
+[    2.450000] s3c2410-wdt s3c2410-wdt: watchdog inactive, reset disabled, irq enabled
+[    2.465000] TCP cubic registered
+[    2.465000] NET: Registered protocol family 17
+[    2.480000] VFS: Mounted root (cramfs filesystem) readonly on device 31:2.
+[    2.485000] Freeing init memory: 120K
+[    3.605000] AX88796C: Power saving disabled
+[    3.810000] Dump AX88796C registers:
+[    3.810000]        Page0   Page1   Page2   Page3   Page4   Page5   Page6   Page7
+[    3.810000] 0x00   0x80c0  0x80c1  0x80c2  0x80c3  0x80c4  0x80c5  0x80c6  0x80c7
+[    3.810000] 0x02   0x1234  0x0000  0x0000  0x0000  0x0000  0x0000  0x0000  0x0000
+[    3.810000] 0x04   0x0043  0x0000  0x1002  0x0000  0xf000  0x0000  0x0000  0x0000
+[    3.810000] 0x06   0x0200  0x0000  0x05f8  0x0000  0x0000  0x0000  0x0000  0x0000
+[    3.810000] 0x08   0xffff  0x2000  0x0000  0x0000  0x0000  0x0000  0x0000  0x0000
+[    3.810000] 0x0a   0x0000  0xa902  0x0000  0x0000  0x0c00  0x0000  0x0000  0x0000
+[    3.810000] 0x0c   0xc820  0x0101  0x0204  0x0000  0xff00  0x0000  0x0000  0x0000
+[    3.810000] 0x0e   0x0318  0x0101  0x1508  0x0000  0x0000  0x0000  0x0000  0x0000
+[    3.810000] 0x10   0x001f  0xc000  0x120c  0x0000  0x0000  0x0000  0x0000  0x0000
+[    3.810000] 0x12   0x0040  0x0900  0x0000  0x0000  0x0000  0x0000  0x0000  0x0000
+[    3.810000] 0x14   0x0000  0x000f  0x4224  0x0000  0x0000  0x0000  0x0000  0x0000
+[    3.810000] 0x16   0x0000  0x0000  0x0001  0xffff  0x0000  0x0000  0x0000  0x0000
+[    3.810000] 0x18   0x4000  0x0000  0x043f  0x2000  0x0000  0x0000  0x0000  0x0000
+[    3.810000] 0x1a   0x0000  0x0000  0x0000  0x1500  0x0000  0x0000  0x0000  0x0000
+[    3.810000] 0x1c   0x0000  0x0000  0x0600  0x0048  0x0000  0x0000  0x0000  0x0000
+[    3.810000] 0x1e   0x0000  0x0000  0x0000  0x0000  0x0000  0x0000  0x0000  0x0000
+[    3.810000]
+[    3.810000] ASIX AX88796C Fast Ethernet Adapter:v1.7.0 12:23:53 Oct 20 2016
+[    3.810000] <6>  http://www.asix.com.tw
+[    3.810000] AX88796C: MAC Address 00-12-34-56-78-9a
+[    3.815000] eth0:  at 0x8000000 IRQ 63
+[    4.520000] Dump PHY registers:
+[    4.520000]   MR0 = 0x3000
+[    4.520000]   MR1 = 0x7809
+[    4.520000]   MR2 = 0x003b
+[    4.520000]   MR3 = 0x1891
+[    4.520000]   MR4 = 0x05e1
+[    4.520000]   MR5 = 0x0000
+[    4.520000] Dump AX88796C registers (after initialaztion):
+[    4.520000]        Page0   Page1   Page2   Page3   Page4   Page5   Page6   Page7
+[    4.520000] 0x00   0x80c0  0x80c1  0x80c2  0x80c3  0x80c4  0x80c5  0x80c6  0x80c7
+[    4.520000] 0x02   0x1234  0x0001  0x0000  0x789a  0x0000  0x0000  0x0000  0x0000
+[    4.520000] 0x04   0xca03  0x0000  0x1007  0x3456  0xf000  0x0000  0x0000  0x0000
+[    4.520000] 0x06   0x0200  0x0000  0x05ff  0x0012  0x0000  0x0000  0x0000  0x0000
+[    4.520000] 0x08   0xffff  0x2000  0x0000  0x0000  0x0000  0x0000  0x0000  0x0000
+[    4.520000] 0x0a   0x0000  0xa902  0x3005  0x0000  0x0c00  0x0000  0x0000  0x0000
+[    4.520000] 0x0c   0x9820  0x0101  0x0305  0x0000  0xff00  0x0000  0x0000  0x0000
+[    4.520000] 0x0e   0x031c  0x0101  0x1509  0x0000  0x0000  0x0000  0x0000  0x0000
+[    4.520000] 0x10   0x001f  0x4000  0x120c  0x0000  0x0000  0x0000  0x0000  0x0000
+[    4.520000] 0x12   0x0040  0x0900  0x0000  0x0000  0x031d  0x0000  0x0000  0x0000
+[    4.520000] 0x14   0x0000  0x000f  0x4224  0x0000  0x0200  0x0000  0x0000  0x0000
+[    4.520000] 0x16   0x0000  0x0000  0x0001  0xffff  0x0307  0x0000  0x0000  0x0000
+[    4.520000] 0x18   0x4000  0x0000  0x043f  0x2000  0x0000  0x0000  0x0000  0x0000
+[    4.520000] 0x1a   0x0000  0x0000  0x0000  0x1500  0x0000  0x0000  0x0000  0x0000
+[    4.520000] 0x1c   0x0000  0x0000  0x0600  0x0048  0x0000  0x0000  0x0000  0x0000
+[    4.520000] 0x1e   0x0000  0x0000  0x0000  0x0000  0x0000  0x0000  0x0000  0x0000
+[    4.520000]
+[    4.520000]
+[    4.520000] ax88796c_interrupt: Interrupt status 0x200
+[    4.520000] Dump PHY registers:
+[    4.520000]   MR0 = 0x3000
+[    4.520000]   MR1 = 0x7809
+[    4.520000]   MR2 = 0x003b
+[    4.520000]   MR3 = 0x1891
+[    4.520000]   MR4 = 0x05e1
+[    4.520000]   MR5 = 0x0000
+[    4.520000]
+[    4.520000] ax88796c_interrupt: Interrupt status 0x0
+[    5.520000] eth0: Cable connected
+[    6.520000] eth0: Check media status
+[    7.115000]
+[    7.115000] ax88796c_interrupt: Interrupt status 0x200
+[    7.115000] Dump PHY registers:
+[    7.115000]   MR0 = 0x3100
+[    7.115000]   MR1 = 0x782d
+[    7.115000]   MR2 = 0x003b
+[    7.115000]   MR3 = 0x1891
+[    7.115000]   MR4 = 0x05e1
+[    7.115000]   MR5 = 0xcde1
+[    7.115000] eth0: link up, 100Mbps, full-duplex
+
+# ping -c 3 192.168.0.2
+PING 192.168.0.2 (192.168.0.2): 56 data bytes
+64 bytes from 192.168.0.2: seq=0 ttl=128 time=10.000 ms
+64 bytes from 192.168.0.2: seq=1 ttl=128 time=0.000 ms
+64 bytes from 192.168.0.2: seq=2 ttl=128 time=0.000 ms
+
+--- 192.168.0.2 ping statistics ---
+3 packets transmitted, 3 packets received, 0% packet loss
+round-trip min/avg/max = 0.000/3.333/10.000 ms
+# dmesg
+[  325.510000]
+[  325.510000] ax88796c_xmit: TX packet, len 98
+[  325.510000] Dump processed TX packet (len 112)
+[  325.510000] 00 62 3f 9d c0 62 17 9d 20 cf 30 84 e9 41 00 12
+[  325.510000] 34 56 78 9a 08 00 45 00 00 54 00 00 40 00 40 01
+[  325.510000] b9 35 c0 a8 00 21 c0 a8 00 02 08 00 01 02 20 07
+[  325.510000] 00 00 70 e3 66 13 00 00 00 00 00 00 00 00 00 00
+[  325.510000] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[  325.510000] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[  325.510000] 00 00 00 00 00 00 00 00 00 00 c0 dd 38 62 c7 9d
+[  325.510000]
+[  325.510000] ax88796c_interrupt: Interrupt status 0x1
+[  325.510000]
+[  325.510000] ax88696c_rx_fixup: Dump RX data, total len 104, packet len 98
+[  325.510000] 00 62 87 9d 20 00 00 12 34 56 78 9a 20 cf 30 84
+[  325.510000] e9 41 08 00 45 00 00 54 59 b5 40 00 80 01 1f 80
+[  325.510000] c0 a8 00 02 c0 a8 00 21 00 00 09 02 20 07 00 00
+[  325.510000] 70 e3 66 13 00 00 00 00 00 00 00 00 00 00 00 00
+[  325.510000] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[  325.510000] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[  325.510000] 00 00 00 00 00 00 00 00
+[  325.510000]
+[  325.510000] ax88796c_interrupt: Interrupt status 0x0
+[  326.520000]
+[  326.520000] ax88796c_xmit: TX packet, len 98
+[  326.520000] Dump processed TX packet (len 112)
+[  326.520000] 00 62 47 9d c0 62 17 9d 20 cf 30 84 e9 41 00 12
+[  326.520000] 34 56 78 9a 08 00 45 00 00 54 00 00 40 00 40 01
+[  326.520000] b9 35 c0 a8 00 21 c0 a8 00 02 08 00 a1 97 20 07
+[  326.520000] 00 01 c0 4c 76 13 00 00 00 00 00 00 00 00 00 00
+[  326.520000] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[  326.520000] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[  326.520000] 00 00 00 00 00 00 00 00 00 00 e0 e0 40 62 bf 9d
+[  326.520000]
+[  326.520000] ax88796c_interrupt: Interrupt status 0x1
+[  326.520000]
+[  326.520000] ax88696c_rx_fixup: Dump RX data, total len 104, packet len 98
+[  326.520000] 00 62 8f 9d 20 00 00 12 34 56 78 9a 20 cf 30 84
+[  326.520000] e9 41 08 00 45 00 00 54 59 b6 40 00 80 01 1f 7f
+[  326.520000] c0 a8 00 02 c0 a8 00 21 00 00 a9 97 20 07 00 01
+[  326.520000] c0 4c 76 13 00 00 00 00 00 00 00 00 00 00 00 00
+[  326.520000] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[  326.520000] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[  326.520000] 00 00 00 00 00 00 00 00
+[  326.520000]
+[  326.520000] ax88796c_interrupt: Interrupt status 0x0
+[  327.525000]
+[  327.525000] ax88796c_xmit: TX packet, len 98
+[  327.525000] Dump processed TX packet (len 112)
+[  327.525000] 00 62 4f 9d c0 62 17 9d 20 cf 30 84 e9 41 00 12
+[  327.525000] 34 56 78 9a 08 00 45 00 00 54 00 00 40 00 40 01
+[  327.525000] b9 35 c0 a8 00 21 c0 a8 00 02 08 00 ca 40 20 07
+[  327.525000] 00 02 88 a2 85 13 00 00 00 00 00 00 00 00 00 00
+[  327.525000] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[  327.525000] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[  327.525000] 00 00 00 00 00 00 00 00 00 00 c0 dd 48 62 b7 9d
+[  327.525000]
+[  327.525000] ax88796c_interrupt: Interrupt status 0x1
+[  327.525000]
+[  327.525000] ax88696c_rx_fixup: Dump RX data, total len 104, packet len 98
+[  327.525000] 00 62 97 9d 20 00 00 12 34 56 78 9a 20 cf 30 84
+[  327.525000] e9 41 08 00 45 00 00 54 59 bd 40 00 80 01 1f 78
+[  327.525000] c0 a8 00 02 c0 a8 00 21 00 00 d2 40 20 07 00 02
+[  327.525000] 88 a2 85 13 00 00 00 00 00 00 00 00 00 00 00 00
+[  327.525000] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[  327.525000] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[  327.525000] 00 00 00 00 00 00 00 00
+[  327.525000]
+[  327.525000] ax88796c_interrupt: Interrupt status 0x0
