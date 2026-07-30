@@ -1,15 +1,14 @@
-===============================================================================
-Driver Overview
-===============================================================================
-AX88796C 3-in-1 SRAM-like 8/16-bit Fast Ethernet Linux 2.6.x Driver
+# ASIX AX88796C SRAM-like Fast Ethernet Linux driver (`ax88796c.o`)
 
-The AX88796C Ethernet controller is a high performance and highly integrated
-local CPU bus Ethernet controller with embedded 10/100Mbps PHY/Transceiver
-and supports both 8-bit and 16-bit local CPU interfaces for any 
-embedded systems. 
+Official ASIX AX88796C SRAM-like Fast Ethernet Linux driver source. (Driver module name: `ax88796c.o`)
 
-If you look for more details,
-    please visit ASIX's web site (http://www.asix.com.tw).
+---
+## ASIX SPI/Non-PCI Fast Ethernet ICs 
+- [AX88796C SPI/Non-PCI Fast Ethernet Chip](https://www.asix.com.tw/en/product/EmbeddedEthernet/1-PortEthernet/AX88796C)
+
+The **AX88796C** is a low‑power SPI/Non-PCI Fast Ethernet controller designed for embedded and industrial networking. It supports multiple host interfaces, including **SPI and localbus/SRAM‑like**. The local bus allows 8/16‑bit SRAM‑like or multiplexed connections, enabling direct MCU integration without extra logic. For CPUs with SPI, the AX88796C also offers an optional SPI slave interface to simplify hardware design.
+
+---
 
 ===============================================================================
 File Description
