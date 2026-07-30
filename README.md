@@ -82,9 +82,9 @@ Prepare:
 Getting Start:
 	
 	1.Extract the AX88796C source file by executing the following command:
-	
+		```bash
 		[root@localhost]# tar jxvf driver_package.tar.bz2
-	
+		```
 	2.Edit the makefile to specify the path of target platform Linux Kernel source.
 	
 			KDIR = /work/linux-2.6.x
