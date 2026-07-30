@@ -80,6 +80,7 @@ Prepare:
 	Cross-Compiler.
 
 Getting Start:
+	
 	1.Extract the AX88796C source file by executing the following command:
 	
 		[root@localhost]# tar jxvf driver_package.tar.bz2
