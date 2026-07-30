@@ -9,10 +9,8 @@ Official ASIX AX88796C SRAM-like Fast Ethernet Linux driver source. (Driver modu
 The **AX88796C** is a low‑power SPI/Non-PCI Fast Ethernet controller designed for embedded and industrial networking. It supports multiple host interfaces, including **SPI and localbus/SRAM‑like**. The local bus allows 8/16‑bit SRAM‑like or multiplexed connections, enabling direct MCU integration without extra logic. For CPUs with SPI, the AX88796C also offers an optional SPI slave interface to simplify hardware design.
 
 ---
+## File Description
 
-===============================================================================
-File Description
-===============================================================================
 README               This file
 ax88796c_main.c      AX88796C Linux driver main functions
 ax88796c.h           AX88796C Linux driver header file
@@ -27,9 +25,9 @@ Makefile             AX88796C driver make file
 ax88796c.log         Log file of driver debug messages
 COPYING	GNU GENERAL PUBLIC LICENSE
 
-================================================================================
-Platform Driver Registration
-================================================================================
+---
+## Platform Driver Registration
+
 Since the AX88796C Linux driver is written in platform device model, developer
 should declare the resource for it. For more information, please refer to the
 "Kernel Source/Documentation/driver-model/platform.txt". Following shows
@@ -71,106 +69,102 @@ static struct platform_device *smdk2440_devices[] __initdata = {
         &net_device_ax88796c,           /* Insert driver resource here */
 };
 
-===============================================================================
-COMPILING DRIVER
-===============================================================================
-Prepare: 
+---
+## Compiling the Driver
+Requirements:
 
-	AX88796C Linux Driver Source.
-	Linux Kernel source code.
-	Cross-Compiler.
+AX88796C Linux driver source
 
-Getting Start:
+Linux kernel source code
 
-	1.Extract the AX88796C source file by executing the following command:
-		[root@localhost]# tar jxvf driver_package.tar.bz2
+Cross‑compiler
 
-	2.Edit the makefile to specify the path of target platform Linux Kernel
-          source.
-			KDIR = /work/linux-2.6.x
+Steps:
 
-	3.Edit the makefile to specify the path of cross toolchain.
-			CC = /work/xxx-gcc
+Extract the source package:
 
-	4.Executing 'make' command to compile AX88796C Driver.
+bash
+tar jxvf driver_package.tar.bz2
+Edit the Makefile to specify the kernel source path:
 
-	5.If the compilation is well, the ax88796c.ko and ioctl will be created
-          under the current directory.
+make
+KDIR = /work/linux-2.6.x
+Edit the Makefile to specify the cross‑toolchain path:
 
-===============================================================================
-COMPLATION FLAGS
-===============================================================================
-[AX88796C_8BIT_MODE]
-setting:
-	TRUE  -> AX88796C is running on 8-bit bus
-	FALSE -> AX88796C is running on 16-bit bus
-default:
-	FALSE
+make
+CC = /work/xxx-gcc
+Compile the driver:
 
-[TX_DMA_MODE]
-setting:
-	TRUE  -> TX DMA mode
-	FALSE -> TX PIO mode
-default:
-	TRUE
+bash
+make
+If successful, ax88796c.ko and ioctl will be generated in the current directory.
 
-[RX_DMA_MODE]
-setting:
-	TRUE  -> RX DMA mode
-	FALSE -> RX PIO mode
-default:
-	TRUE
+Compilation Flags
+AX88796C_8BIT_MODE
 
-[AX88796B_PIN_COMPATIBLE]
-setting:
-	TRUE  -> Register mapping is shifted by one bit
-	FALSE -> No changes for register mapping
-default:
-	FALSE
+TRUE → 8‑bit bus
 
-===============================================================================
-DRIVER PARAMETERS
-===============================================================================
-[mem]
-setting:
-	The base address of AX88796C
-default:
-	0 (retrieved from platform information)
+FALSE → 16‑bit bus (default)
 
-[irq]
-setting:
-	The interrupt line number of AX88796C
-default:
-	0 (retrieved from platform information)
+TX_DMA_MODE
 
-[ps_level]
-setting:
-	0 -> Disable power saving
-	1 -> Enable power saving level 1
-	2 -> Enable power saving level 2
-default:
-	0
+TRUE → TX DMA mode (default)
 
-[msg_enable]
-setting:
-	NETIF_MSG_DRV		(0x0001)    (Not used)
-	NETIF_MSG_PROBE		(0x0002)    (Probe messages)
-	NETIF_MSG_LINK		(0x0004)    (Link change messages)
-	NETIF_MSG_TIMER		(0x0008)    (Watchdog messages)
-	NETIF_MSG_IFDOWN	(0x0010)    (Not used)
-	NETIF_MSG_IFUP		(0x0020)    (Initialization messages)
-	NETIF_MSG_RX_ERR	(0x0040)    (RX error messages)
-	NETIF_MSG_TX_ERR	(0x0080)    (TX error messages)
-	NETIF_MSG_TX_QUEUED	(0x0100)    (TX queue messages)
-	NETIF_MSG_INTR		(0x0200)    (Interrupt messages)
-	NETIF_MSG_TX_DONE	(0x0400)    (Not used)
-	NETIF_MSG_RX_STATUS	(0x0800)    (RX indication messages)
-	NETIF_MSG_PKTDATA	(0x1000)    (TX/RX packet data)
-	NETIF_MSG_HW		(0x2000)    (MAC/PHY register dump messages)
-	NETIF_MSG_WOL		(0x4000)    (Wake-On-Lan messages)
-default:
-	NETIF_MSG_DRV | NETIF_MSG_PROBE | \
-	NETIF_MSG_LINK | NETIF_MSG_IFUP | \
-	NETIF_MSG_RX_ERR | NETIF_MSG_TX_ERR | \
-	NETIF_MSG_TX_QUEUED | NETIF_MSG_WOL
+FALSE → TX PIO mode
 
+RX_DMA_MODE
+
+TRUE → RX DMA mode (default)
+
+FALSE → RX PIO mode
+
+AX88796B_PIN_COMPATIBLE
+
+TRUE → Register mapping shifted by one bit
+
+FALSE → No changes (default)
+
+Driver Parameters
+mem
+
+Base address of AX88796C
+
+Default: retrieved from platform info
+
+irq
+
+Interrupt line number
+
+Default: retrieved from platform info
+
+ps_level
+
+0 → Disable power saving (default)
+
+1 → Enable level 1
+
+2 → Enable level 2
+
+msg_enable  
+Bitmask options for debug messages:
+
+0x0002 → Probe messages
+
+0x0004 → Link change messages
+
+0x0040 → RX error messages
+
+0x0080 → TX error messages
+
+0x0100 → TX queue messages
+
+0x0200 → Interrupt messages
+
+0x1000 → TX/RX packet data
+
+0x2000 → MAC/PHY register dump
+
+0x4000 → Wake‑On‑LAN messages
+
+Default:  
+NETIF_MSG_DRV | NETIF_MSG_PROBE | NETIF_MSG_LINK | NETIF_MSG_IFUP | NETIF_MSG_RX_ERR | NETIF_MSG_TX_ERR | NETIF_MSG_TX_QUEUED | NETIF_MSG_WOL
