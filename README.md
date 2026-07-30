@@ -94,7 +94,7 @@ Getting Start:
 			CC = /work/xxx-gcc
 	
 	4.Executing 'make' command to compile AX88796C Driver.
-	5.If the compilation is well, the ax88796c.ko and ioctl will be created under the current directory.
+	5.If the compilation is well, the ax88796c.o and ioctl will be created under the current directory.
 
 ---
 ## Compilation Flags
