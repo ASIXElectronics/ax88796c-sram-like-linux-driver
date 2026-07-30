@@ -81,17 +81,23 @@ Prepare:
 
 Getting Start:
 	1.Extract the AX88796C source file by executing the following command:
+	
 	```c
 		[root@localhost]# tar jxvf driver_package.tar.bz2
 	```
+	
 	2.Edit the makefile to specify the path of target platform Linux Kernel source.
+	
 	```c
 			KDIR = /work/linux-2.6.x
 	```
+	
 	3.Edit the makefile to specify the path of cross toolchain.
+	
 	```c
 			CC = /work/xxx-gcc
 	```
+	
 	4.Executing 'make' command to compile AX88796C Driver.
 	5.If the compilation is well, the ax88796c.ko and ioctl will be created under the current directory.
 
