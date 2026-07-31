@@ -1,6 +1,6 @@
 # ASIX AX88796C SRAM-like Fast Ethernet Linux driver (`ax88796c.o`)
 
-This is the official **ASIX AX88796C SRAM-like Fast Ethernet Linux driver** (module name: `ax88796c.o`), which is suitable for embedded systems, smart home/office devices, Ethernet hubs, switches, routers and home gateway applications. 
+This is the official **ASIX AX88796C SRAM-like Fast Ethernet Linux driver** source (module name: `ax88796c.o`), which is suitable for embedded systems, smart home/office devices, Ethernet hubs, switches, routers and home gateway applications. 
 
 ---
 ## ASIX SPI/Non-PCI Fast Ethernet ICs 
